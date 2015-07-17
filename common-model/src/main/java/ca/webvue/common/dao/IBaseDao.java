@@ -13,40 +13,32 @@ import ca.webvue.common.query.Pageable;
 public interface IBaseDao<T, ID extends Serializable> {
 
 	/**
-	 * 查找实体对象
+	 * query the entity by the id
 	 * 
-	 * @param id
-	 *            ID
-	 * @return 实体对象，若不存在则返回null
+	 * @param id ID
+	 * @return entity, or null if the entity does not exist
 	 */
 	T find(ID id);
 
 	/**
-	 * 查找实体对象
+	 * query the entity
 	 * 
-	 * @param id
-	 *            ID
-	 * @param lockModeType
-	 *            锁定方式
-	 * @return 实体对象，若不存在则返回null
+	 * @param id ID
+	 * @param lockModeType Lock type
+	 * @return entity or null if the entity does not exist
 	 */
 	T find(ID id, LockModeType lockModeType);
 
 	/**
-	 * 查找实体对象集合
+	 * query a collection of entities
 	 * 
-	 * @param first
-	 *            起始记录
-	 * @param count
-	 *            数量
-	 * @param filters
-	 *            筛选
-	 * @param orders
-	 *            排序
+	 * @param first 起始记录
+	 * @param count 数量
+	 * @param filters 筛选
+	 * @param orders 排序
 	 * @return 实体对象集合
 	 */
-	List<T> findList(Integer first, Integer count, List<Filter> filters,
-			List<Order> orders);
+	List<T> findList(Integer first, Integer count, List<Filter> filters, List<Order> orders);
 
 	/**
 	 * 查找实体对象分页
@@ -146,12 +138,12 @@ public interface IBaseDao<T, ID extends Serializable> {
 	void lock(T entity, LockModeType lockModeType);
 
 	/**
-	 * 清除缓存
+	 * clear the cache
 	 */
 	void clear();
 
 	/**
-	 * 同步数据
+	 * flush the cached changed to the database
 	 */
 	void flush();
 }

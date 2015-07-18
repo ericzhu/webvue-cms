@@ -306,6 +306,11 @@
 			<artifactId>mchange-commons-java</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+		</dependency>
+
 
 	</dependencies>
 

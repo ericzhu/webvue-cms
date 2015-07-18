@@ -1,6 +1,7 @@
 package ca.webvue.common.service.impl;
 
-import javax.annotation.Resource;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,8 @@ import ca.webvue.common.service.IUserService;
 @Service
 public class UserService extends BaseService<User, Long> implements IUserService {
 	
-	@Resource(name = "userDaoJpa")
+	@Inject
+	@Named("userDaoJpa")
 	public void setBaseDao(IUserDao userDao) {
 		super.setBaseDao(userDao);
 	}

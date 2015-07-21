@@ -8,8 +8,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../cms-parent/pom.xml</relativePath>
 	</parent>
-
-	<groupId>ca.webvue.common</groupId>
+	
 	<artifactId>common-model</artifactId>
 	<packaging>jar</packaging>
 

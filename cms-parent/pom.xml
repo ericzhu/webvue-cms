@@ -9,6 +9,7 @@
 
 	<modules>
 		<module>../common-model</module>
+		<module>../cms-model</module>
 	</modules>
 
 	<properties>
@@ -381,6 +382,12 @@
 				<artifactId>spring-test-dbunit</artifactId>
 				<version>1.2.0</version>
 				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>ca.webvue.cms</groupId>
+				<artifactId>common-model</artifactId>
+				<version>${project.version}</version>
 			</dependency>
 
 		</dependencies>
